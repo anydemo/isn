@@ -1,0 +1,9 @@
+{
+    "groupId": "com.github.gorgestar",
+    "artifactId": "isn",
+    "library": "spring-boot",
+    "useBeanValidation": true,
+    "invokerPackage": "com.github.gorgestar.isn",
+    "apiPackage": "com.github.gorgestar.isn.api",
+    "modelPackage": "com.github.gorgestar.isn.model"
+}
