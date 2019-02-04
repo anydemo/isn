@@ -1,0 +1,15 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - oraclejdk11
+  - openjdk8
+  - openjdk9
+  - openjdk11
+
+env:
+  - TEST_COMMAND="mvn clean install"
+
+script:
+  - (eval "$TEST_COMMAND")

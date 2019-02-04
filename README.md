@@ -1,4 +1,4 @@
-# OpenAPI generated server
+# OpenAPI generated server [![Build Status](https://travis-ci.com/gorgestar/isn.svg?branch=master)](https://travis-ci.com/gorgestar/isn)
 
 Spring Boot Server 
 
