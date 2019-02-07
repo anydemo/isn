@@ -1,6 +1,7 @@
 package com.github.gorgestar.isn;
 
 import com.fasterxml.jackson.databind.Module;
+import org.mybatis.spring.annotation.MapperScan;
 import org.openapitools.jackson.nullable.JsonNullableModule;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ExitCodeGenerator;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
+@MapperScan(basePackageClasses= {com.github.gorgestar.isn.OpenAPI2SpringBoot.class})
 @ComponentScan(basePackages = {"com.github.gorgestar.isn", "com.github.gorgestar.isn.api" , "org.openapitools.configuration"})
 public class OpenAPI2SpringBoot implements CommandLineRunner {
 

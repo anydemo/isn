@@ -27,10 +27,10 @@ public class OpenAPIDocumentationConfig {
             .title("Swagger Petstore")
             .description("A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification")
             .license("MIT")
-            .licenseUrl("http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT")
-            .termsOfServiceUrl("http://madskristensen.net")
+            .licenseUrl("https://github.com/gorgestar/isn/blob/master/LICENSE")
+            .termsOfServiceUrl("http://github.com/gorgestar/isn")
             .version("1.0.0")
-            .contact(new Contact("","", "foo@example.com"))
+            .contact(new Contact("","", "exflyg@gmail.com"))
             .build();
     }
 

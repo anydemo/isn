@@ -24,3 +24,5 @@
 
 pom.xml
 README.md
+src/main/resources/application.properties
+src/main/java/com/github/gorgestar/isn/OpenAPI2SpringBoot.java

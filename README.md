@@ -20,3 +20,4 @@ Change default port value in application.properties
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md
 
 https://swagger.io/docs/specification/data-models/inheritance-and-polymorphism/
+http://www.ityouknow.com/springboot/2016/11/06/spring-boo-mybatis.html
