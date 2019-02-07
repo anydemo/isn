@@ -3,7 +3,6 @@ package com.github.gorgestar.isn.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.github.gorgestar.isn.model.NewPet;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -11,20 +10,17 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Pet
+ * NewPet
  */
 
-public class Pet   {
+public class NewPet   {
   @JsonProperty("name")
   private String name;
 
   @JsonProperty("tag")
   private String tag;
 
-  @JsonProperty("id")
-  private Long id;
-
-  public Pet name(String name) {
+  public NewPet name(String name) {
     this.name = name;
     return this;
   }
@@ -45,7 +41,7 @@ public class Pet   {
     this.name = name;
   }
 
-  public Pet tag(String tag) {
+  public NewPet tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -65,27 +61,6 @@ public class Pet   {
     this.tag = tag;
   }
 
-  public Pet id(Long id) {
-    this.id = id;
-    return this;
-  }
-
-  /**
-   * Get id
-   * @return id
-  */
-  @ApiModelProperty(required = true, value = "")
-  @NotNull
-
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -95,25 +70,23 @@ public class Pet   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Pet pet = (Pet) o;
-    return Objects.equals(this.name, pet.name) &&
-        Objects.equals(this.tag, pet.tag) &&
-        Objects.equals(this.id, pet.id);
+    NewPet newPet = (NewPet) o;
+    return Objects.equals(this.name, newPet.name) &&
+        Objects.equals(this.tag, newPet.tag);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, tag, id);
+    return Objects.hash(name, tag);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Pet {\n");
+    sb.append("class NewPet {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    tag: ").append(toIndentedString(tag)).append("\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -18,3 +18,5 @@ http://localhost:8080/
 Change default port value in application.properties
 
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md
+
+https://swagger.io/docs/specification/data-models/inheritance-and-polymorphism/
