@@ -1,6 +1,6 @@
 package com.github.gorgestar.isn.mapper;
 
-import com.github.gorgestar.isn.model.Pet;
+import com.github.gorgestar.isn.model.Users;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,15 +12,15 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PetMapperTest {
+public class UserMapperTest {
 
     @Autowired
-    private PetMapper petMapper;
+    private UserMapper userMapper;
 
     @Test
     @Ignore
     public void testQuery() throws Exception {
-        List<Pet> pets = petMapper.getAll();
+        List<Users> pets = userMapper.getAll();
         System.out.println(pets.toString());
     }
 }

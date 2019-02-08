@@ -9,13 +9,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@MapperScan(basePackageClasses= {com.github.gorgestar.isn.OpenAPI2SpringBoot.class})
+@MapperScan(basePackageClasses= {com.github.gorgestar.isn.Application.class})
 @ComponentScan(basePackages = {"com.github.gorgestar.isn", "com.github.gorgestar.isn.api" , "org.openapitools.configuration"})
-public class OpenAPI2SpringBoot implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... arg0) throws Exception {
@@ -25,7 +24,7 @@ public class OpenAPI2SpringBoot implements CommandLineRunner {
     }
 
     public static void main(String[] args) throws Exception {
-        new SpringApplication(OpenAPI2SpringBoot.class).run(args);
+        new SpringApplication(Application.class).run(args);
     }
 
     class ExitException extends RuntimeException implements ExitCodeGenerator {

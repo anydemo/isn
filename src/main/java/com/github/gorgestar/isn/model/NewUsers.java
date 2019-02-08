@@ -10,17 +10,17 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * NewPet
+ * NewUsers
  */
 
-public class NewPet   {
+public class NewUsers   {
   @JsonProperty("name")
   private String name;
 
   @JsonProperty("tag")
   private String tag;
 
-  public NewPet name(String name) {
+  public NewUsers name(String name) {
     this.name = name;
     return this;
   }
@@ -41,7 +41,7 @@ public class NewPet   {
     this.name = name;
   }
 
-  public NewPet tag(String tag) {
+  public NewUsers tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -70,9 +70,9 @@ public class NewPet   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    NewPet newPet = (NewPet) o;
-    return Objects.equals(this.name, newPet.name) &&
-        Objects.equals(this.tag, newPet.tag);
+    NewUsers newUsers = (NewUsers) o;
+    return Objects.equals(this.name, newUsers.name) &&
+        Objects.equals(this.tag, newUsers.tag);
   }
 
   @Override
@@ -83,7 +83,7 @@ public class NewPet   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class NewPet {\n");
+    sb.append("class NewUsers {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    tag: ").append(toIndentedString(tag)).append("\n");

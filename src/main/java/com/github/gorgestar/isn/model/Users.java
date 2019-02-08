@@ -3,7 +3,8 @@ package com.github.gorgestar.isn.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.github.gorgestar.isn.model.NewPet;
+import com.github.gorgestar.isn.model.BaseEntity;
+import com.github.gorgestar.isn.model.NewUsers;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -11,10 +12,10 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * Pet
+ * Users
  */
 
-public class Pet   {
+public class Users   {
   @JsonProperty("name")
   private String name;
 
@@ -22,9 +23,12 @@ public class Pet   {
   private String tag;
 
   @JsonProperty("id")
-  private Long id;
+  private String id;
 
-  public Pet name(String name) {
+  @JsonProperty("version")
+  private Long version;
+
+  public Users name(String name) {
     this.name = name;
     return this;
   }
@@ -45,7 +49,7 @@ public class Pet   {
     this.name = name;
   }
 
-  public Pet tag(String tag) {
+  public Users tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -65,7 +69,7 @@ public class Pet   {
     this.tag = tag;
   }
 
-  public Pet id(Long id) {
+  public Users id(String id) {
     this.id = id;
     return this;
   }
@@ -78,12 +82,33 @@ public class Pet   {
   @NotNull
 
 
-  public Long getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(String id) {
     this.id = id;
+  }
+
+  public Users version(Long version) {
+    this.version = version;
+    return this;
+  }
+
+  /**
+   * Get version
+   * @return version
+  */
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
+
+
+  public Long getVersion() {
+    return version;
+  }
+
+  public void setVersion(Long version) {
+    this.version = version;
   }
 
 
@@ -95,25 +120,27 @@ public class Pet   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Pet pet = (Pet) o;
-    return Objects.equals(this.name, pet.name) &&
-        Objects.equals(this.tag, pet.tag) &&
-        Objects.equals(this.id, pet.id);
+    Users users = (Users) o;
+    return Objects.equals(this.name, users.name) &&
+        Objects.equals(this.tag, users.tag) &&
+        Objects.equals(this.id, users.id) &&
+        Objects.equals(this.version, users.version);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, tag, id);
+    return Objects.hash(name, tag, id, version);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Pet {\n");
+    sb.append("class Users {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    tag: ").append(toIndentedString(tag)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("}");
     return sb.toString();
   }

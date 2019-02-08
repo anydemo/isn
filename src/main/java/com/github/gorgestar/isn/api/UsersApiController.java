@@ -6,13 +6,13 @@ import org.springframework.web.context.request.NativeWebRequest;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("${openapi.swaggerPetstore.base-path:/api}")
-public class PetsApiController implements PetsApi {
+@RequestMapping("${openapi.swaggerIsn.base-path:/api}")
+public class UsersApiController implements UsersApi {
 
     private final NativeWebRequest request;
 
     @org.springframework.beans.factory.annotation.Autowired
-    public PetsApiController(NativeWebRequest request) {
+    public UsersApiController(NativeWebRequest request) {
         this.request = request;
     }
 

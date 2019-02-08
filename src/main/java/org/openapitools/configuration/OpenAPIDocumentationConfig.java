@@ -24,8 +24,8 @@ public class OpenAPIDocumentationConfig {
 
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("Swagger Petstore")
-            .description("A sample API that uses a petstore as an example to demonstrate features in the swagger-2.0 specification")
+            .title("Swagger isn")
+            .description("awesome social network")
             .license("MIT")
             .licenseUrl("https://github.com/gorgestar/isn/blob/master/LICENSE")
             .termsOfServiceUrl("http://github.com/gorgestar/isn")
@@ -35,7 +35,7 @@ public class OpenAPIDocumentationConfig {
     }
 
     @Bean
-    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.swaggerPetstore.base-path:/api}") String basePath) {
+    public Docket customImplementation(ServletContext servletContext, @Value("${openapi.swaggerIsn.base-path:/api}") String basePath) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                     .apis(RequestHandlerSelectors.basePackage("com.github.gorgestar.isn.api"))
